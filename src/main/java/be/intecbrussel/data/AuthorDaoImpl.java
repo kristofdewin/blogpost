@@ -9,7 +9,7 @@ import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
-public class AuthorDao {
+public class AuthorDaoImpl implements AuthorDaoInterface {
 
     //create author
     public void createNewAuthor(Author author){

@@ -8,7 +8,7 @@ import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
-public class CommentDao {
+public class CommentDaoDaoImpl implements CommentDaoInterface {
 
     //create Comment
     public void createNewComment(Comment newComment){

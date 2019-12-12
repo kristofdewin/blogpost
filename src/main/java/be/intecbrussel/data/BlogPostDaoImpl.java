@@ -2,12 +2,11 @@ package be.intecbrussel.data;
 
 import be.intecbrussel.config.Config;
 import be.intecbrussel.model.BlogPost;
-import be.intecbrussel.model.Comment;
 
 import javax.persistence.*;
 import java.util.List;
 
-public class BlogPostDao {
+public class BlogPostDaoImpl implements BlogPostDaoInterface {
 
     //create blogpost
     public void createNewBlogPost(BlogPost blogPost){
