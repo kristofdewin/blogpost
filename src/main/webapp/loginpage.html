@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="myStyle.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/18f81f1081.js" crossorigin="anonymous"></script>
+        <script src="/script.js"></script>
+    <title>Login Page</title>
+</head>
+<body>
+
+        <body style="background-image: url('https://images-na.ssl-images-amazon.com/images/I/91W5wBnDOUL._SL1500_.jpg');">
+            <div class="container">
+                <div class="jumbotron">
+                    <header style="text-align: center;">
+                        <a class="headerText" href="home.html" style="color: white;">Blog Central</a>
+                    </header>
+                </div>
+                <main role="main" class="main-container">
+            
+                <div class="topnav bg-secondary">              
+                        <a class="nav-link" href="#">My Profile</a>
+                        <div class="search-container">
+                          <form action="#">
+                            <input type="text" placeholder="Search" name="search">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                          </form>
+                        </div>
+                        <div class="login-container">
+                            <a class="login-link" href="#">Login</a>
+                            <a class="login-link" href="#">Register</a>
+                          </div>
+                      </div>
+        <div class="loginpage-container">
+        <form class="login-form" action="LoginServlet" method="post">
+            <h1>Login</h1><br><br>
+            Username: 
+            <input type="text" style="margin-left: 25px;" name="name">
+            <br> <br>
+            Password:
+            <input type="password" style="margin-left: 25px;" name="password">
+            <br> <br>
+            <button type="submit" class="btn btn-secondary">Login</button>
+        </form>
+        </div>
+    
+
+    
+</body>
+</html>
