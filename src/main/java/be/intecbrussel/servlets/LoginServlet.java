@@ -1,6 +1,7 @@
 package be.intecbrussel.servlets;
 
-import be.intecbrussel.data.AuthorDao;
+import be.intecbrussel.data.AuthorDaoImpl;
+import be.intecbrussel.data.AuthorDaoInterface;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -24,7 +25,8 @@ public class LoginServlet extends HttpServlet {
         String user = req.getParameter("name");
         String password = req.getParameter("password");
 
-        AuthorDao authorDao = new AuthorDao();
+        AuthorDaoInterface authorDao = new AuthorDaoImpl();
+
         userNameDB = authorDao.findAuthorByUsername(user).getUserName();
         passwordDB = authorDao.findAuthorByUsername(user).getPassword();
 

@@ -1,6 +1,8 @@
 package be.intecbrussel.servlets;
 
-import be.intecbrussel.data.AuthorDao;
+
+import be.intecbrussel.data.AuthorDaoImpl;
+import be.intecbrussel.data.AuthorDaoInterface;
 import be.intecbrussel.model.Author;
 
 import javax.servlet.RequestDispatcher;
@@ -15,7 +17,7 @@ import java.io.PrintWriter;
 @WebServlet("/SigninServlet")
 public class SigninServlet extends HttpServlet {
 
-    AuthorDao authorDao = new AuthorDao();
+    AuthorDaoInterface authorDao = new AuthorDaoImpl();
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

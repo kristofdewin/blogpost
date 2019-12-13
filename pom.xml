@@ -25,11 +25,11 @@
                     <container>
                         <containerId>tomee8x</containerId>
                         <type>installed</type>
-                        <home>${env.TOMCAT_HOME}</home>
+                        <home>/opt/apache-tomee-8.0.0</home>
                     </container>
                     <configuration>
                         <type>existing</type>
-                        <home>${env.TOMCAT_HOME}</home>
+                        <home>/opt/apache-tomee-8.0.0</home>
                     </configuration>
                 </configuration>
             </plugin>
@@ -78,6 +78,12 @@
             <version>8.0.1</version>
             <scope>provided</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/javax.persistence/javax.persistence-api -->
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>javax.persistence-api</artifactId>
+            <version>2.2</version>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
         <dependency>
             <groupId>org.hibernate</groupId>
@@ -96,6 +102,7 @@
             <artifactId>jstl-api</artifactId>
             <version>1.2-rev-1</version>
         </dependency>
+
     </dependencies>
 
 
