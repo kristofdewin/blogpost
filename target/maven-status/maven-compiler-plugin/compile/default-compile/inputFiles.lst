@@ -1,0 +1,15 @@
+/home/patje/IdeaProjects/blogpost/src/main/java/be/intecbrussel/servlets/UserDetailServlet.java
+/home/patje/IdeaProjects/blogpost/src/main/java/be/intecbrussel/data/AuthorDaoImpl.java
+/home/patje/IdeaProjects/blogpost/src/main/java/be/intecbrussel/model/Author.java
+/home/patje/IdeaProjects/blogpost/src/main/java/be/intecbrussel/servlets/LoginServlet.java
+/home/patje/IdeaProjects/blogpost/src/main/java/be/intecbrussel/model/Comment.java
+/home/patje/IdeaProjects/blogpost/src/main/java/be/intecbrussel/data/BlogPostDaoInterface.java
+/home/patje/IdeaProjects/blogpost/src/main/java/be/intecbrussel/model/BlogPost.java
+/home/patje/IdeaProjects/blogpost/src/main/java/be/intecbrussel/data/CommentDaoInterface.java
+/home/patje/IdeaProjects/blogpost/src/main/java/be/intecbrussel/servlets/SigninServlet.java
+/home/patje/IdeaProjects/blogpost/src/main/java/be/intecbrussel/main/Main.java
+/home/patje/IdeaProjects/blogpost/src/main/java/be/intecbrussel/data/AuthorDaoInterface.java
+/home/patje/IdeaProjects/blogpost/src/main/java/be/intecbrussel/servlets/LogoutServlet.java
+/home/patje/IdeaProjects/blogpost/src/main/java/be/intecbrussel/config/Config.java
+/home/patje/IdeaProjects/blogpost/src/main/java/be/intecbrussel/data/CommentDaoDaoImpl.java
+/home/patje/IdeaProjects/blogpost/src/main/java/be/intecbrussel/data/BlogPostDaoImpl.java

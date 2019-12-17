@@ -28,6 +28,6 @@ public class LogoutServlet extends HttpServlet {
             loginCookie.setMaxAge(0);
             resp.addCookie(loginCookie);
         }
-        resp.sendRedirect("unlogedinhomepage");
+        resp.sendRedirect("/bloghome.html");
     }
 }

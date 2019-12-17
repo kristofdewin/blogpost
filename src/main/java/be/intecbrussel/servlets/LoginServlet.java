@@ -35,10 +35,15 @@ public class LoginServlet extends HttpServlet {
             //setting cookie to expire in 30 min
             loginCookie.setMaxAge(30*60);
             resp.addCookie(loginCookie);
-            resp.sendRedirect("loginSuccess.jsp");
+
+            //resp.sendRedirect doesn't work. use requestdispatcher instead (not a blog since its on the same domain)
+//            resp.sendRedirect("/blogdetailpage.html");
+
+           RequestDispatcher rd = getServletContext().getRequestDispatcher("/blogdetailpage.html");
+            rd.forward(req,resp);
 
         } else {
-            RequestDispatcher rd = getServletContext().getRequestDispatcher("/login.html");
+            RequestDispatcher rd = getServletContext().getRequestDispatcher("/loginpage.html");
             PrintWriter out = resp.getWriter();
             out.println("<font color=red>Either user name or password is wrong.</font>");
             rd.include(req,resp);

@@ -19,13 +19,16 @@
             if(cookie.getName().equals("user")) userName = cookie.getValue();
         }
     }
-    // if(userName == null) response.sendRedirect("login.html");
+    if(userName == null) response.sendRedirect("/bloghome.html");
+    else response.sendRedirect("/blogdetailpage.html");
 %>
+<%--
 <h3>Hi <%=userName %>, Login successful.</h3>
 <br>
 <form action="LogoutServlet" method="post">
     <input type="submit" value="Logout" >
 </form>
+--%>
 
 </body>
 </html>
