@@ -24,7 +24,6 @@
     <main role="main" class="main-container">
 
         <div class="topnav bg-secondary">
-            <a class="nav-link" href="#">My Profile</a>
             <div class="search-container">
                 <form action="#">
                     <input type="text" placeholder="Search" name="search">
@@ -38,7 +37,7 @@
         </div>
 
         <div class="loginpage-container">
-            <form class="login-form" action="/SigninServlet" method="post">
+            <form class="login-form" action="SigninServlet" method="post">
                 <h1>Become a Member</h1>
                 Fields marked with * are required.<br><br><br>
 
@@ -70,7 +69,7 @@
                 <input type="password" name="password" required>
                 <br> <br>
                 Retype password* :<br>
-                <input type="password" name="password" required>
+                <input type="password" name="retypepassword" required>
                 <br> <br>
                 <button type="submit" class="btn btn-secondary">Login
                 </button>

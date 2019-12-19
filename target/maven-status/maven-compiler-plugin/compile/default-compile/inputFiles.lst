@@ -10,6 +10,7 @@
 /home/patje/IdeaProjects/blogpost/src/main/java/be/intecbrussel/main/Main.java
 /home/patje/IdeaProjects/blogpost/src/main/java/be/intecbrussel/data/AuthorDaoInterface.java
 /home/patje/IdeaProjects/blogpost/src/main/java/be/intecbrussel/servlets/LogoutServlet.java
+/home/patje/IdeaProjects/blogpost/src/main/java/be/intecbrussel/servlets/EditProfileServlet.java
 /home/patje/IdeaProjects/blogpost/src/main/java/be/intecbrussel/config/Config.java
 /home/patje/IdeaProjects/blogpost/src/main/java/be/intecbrussel/data/CommentDaoDaoImpl.java
 /home/patje/IdeaProjects/blogpost/src/main/java/be/intecbrussel/data/BlogPostDaoImpl.java

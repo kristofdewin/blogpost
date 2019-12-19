@@ -53,7 +53,30 @@ public class AuthorDaoImpl implements AuthorDaoInterface {
         return query.getResultList();
     }
 
-    //update author
+    //update author doesn't
+    public void updateAuthor(Author changedAuthor){
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory(Config.PERSISTENCE_UNIT_NAME);
+        EntityManager em = emf.createEntityManager();
+        em.getTransaction().begin();
+        Author author = em.find(Author.class,changedAuthor.getAuthorId());
+            if(changedAuthor.getUserName() != null && !changedAuthor.getUserName().isEmpty())
+                author.setUserName(changedAuthor.getUserName());
+            if(changedAuthor.getEmail()!= null && !changedAuthor.getEmail().isEmpty())
+                author.setEmail(changedAuthor.getEmail());
+            if(changedAuthor.getHouseNr()!=null && !changedAuthor.getHouseNr().isEmpty())
+                author.setHouseNr(changedAuthor.getHouseNr());
+            if(changedAuthor.getCity() !=null && !changedAuthor.getCity().isEmpty())
+                author.setCity(changedAuthor.getCity());
+            if(changedAuthor.getZip() != null && !changedAuthor.getZip().isEmpty())
+                author.setZip(changedAuthor.getZip());
+            if(changedAuthor.getPassword() != null && !changedAuthor.getPassword().isEmpty())
+                author.setPassword(author.getPassword());
+        em.merge(author);
+        em.flush();
+        em.close();
+        emf.close();
+
+    }
     //delete author
     public void deleteAuthorById(int id){
         EntityManagerFactory emf = Persistence.createEntityManagerFactory(Config.PERSISTENCE_UNIT_NAME);
@@ -64,6 +87,5 @@ public class AuthorDaoImpl implements AuthorDaoInterface {
         em.getTransaction().commit();
         em.close();
         emf.close();
-
     }
 }

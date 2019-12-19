@@ -19,16 +19,17 @@ public class SigninServlet extends HttpServlet {
 
     AuthorDaoInterface authorDao = new AuthorDaoImpl();
 
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 
-        String userName = req.getParameter("username");
-        String firstName = req.getParameter("firstname");
-        String lastName = req.getParameter("lastname");
+        String userName = req.getParameter("userName");
+        String firstName = req.getParameter("firstName");
+        String lastName = req.getParameter("lastName");
         String email = req.getParameter("email");
         String street = req.getParameter("street");
-        String houseNr = req.getParameter("housenr");
+        String houseNr = req.getParameter("houseNr");
         String city = req.getParameter("city");
         String zip = req.getParameter("zip");
         String password = req.getParameter("password");
@@ -49,12 +50,12 @@ public class SigninServlet extends HttpServlet {
 
             authorDao.createNewAuthor(author);
 
-            //als signin lukt wordt je doorverwezen naar de logged in page (login placeholder momenteel)
-            RequestDispatcher rd = getServletContext().getRequestDispatcher("/login.html");
+            //als signin lukt wordt je doorverwezen naar de loginpage
+            RequestDispatcher rd = getServletContext().getRequestDispatcher("/loginpage.html");
             rd.forward(req,resp);
 
         } else {
-            RequestDispatcher rd = getServletContext().getRequestDispatcher("/signin.html");
+            RequestDispatcher rd = getServletContext().getRequestDispatcher("/registerpage.html");
             PrintWriter out = resp.getWriter();
             out.println("<font color=red>Please input password again</font>");
             rd.include(req,resp);

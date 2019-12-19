@@ -1,10 +1,7 @@
 package be.intecbrussel.servlets;
-
 import be.intecbrussel.data.AuthorDaoImpl;
 import be.intecbrussel.data.AuthorDaoInterface;
 import be.intecbrussel.model.Author;
-
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
@@ -54,7 +51,7 @@ public class UserDetailServlet extends HttpServlet {
                 "<div class=\"container\">\n" +
                 "    <div class=\"jumbotron\">\n" +
                 "        <header style=\"text-align: center;\">\n" +
-                "            <a class=\"headerText\" href=\"bloghome.html\" style=\"color: white;\">Blog Central</a>\n" +
+                "            <a class=\"headerText\" href=\"blogdetailpage.html\" style=\"color: white;\">Blog Central</a>\n" +
                 "        </header>\n" +
                 "    </div>\n" +
                 "    <main role=\"main\" class=\"main-container\">\n" +
@@ -68,23 +65,36 @@ public class UserDetailServlet extends HttpServlet {
                 "                </form>\n" +
                 "            </div>\n" +
                 "            <div class=\"login-container\">\n" +
-                "                <a class=\"login-link\" href=\"#\">Login</a>\n" +
-                "                <a class=\"login-link\" href=\"#\">Register</a>\n" +
                 "            </div>\n" +
                 "        </div>");
 
         out.println(" <div class=\"loginpage-container\">\n" +
-
+                        " <form action=\"EditProfileServlet\">\n" +
+                        "                   <input type=\"submit\" value = \"Edit Profile\">\n" +
+                        "                </form>" +
                 "                <h1>User Details</h1>\n" +
-                "                <br><br><br>");
+                "                <br>");
 
         out.print("<p>First name: ");
-        out.println(author.getFirstName());
+        out.println(author.getFirstName()==null?"Empty":author.getFirstName());
         out.println("<p");
         out.print("<p>Last name: ");
-        out.println(author.getLastName());
+        out.println(author.getLastName()==null?"Empty":author.getLastName());
         out.println("<p");
-        // other object properties will need to be pulled in this way as wel
+        out.print("<p>User name: ");
+        out.println(author.getUserName()==null?"Empty":author.getUserName());
+        out.println("<p");
+        out.print("<p>Email: ");
+        out.println(author.getEmail()==null?"Empty":author.getEmail());
+        out.println("<p");
+        out.print("<p>Street: ");
+        out.println(author.getStreet()==null?"Empty":author.getStreet());
+        out.println("<p");
+        out.print("<p>House Nr: ");
+        out.println(author.getHouseNr()==null?"Empty":author.getHouseNr());
+        out.println("<p");
+        out.print("<p>Zip: ");
+        out.println(author.getZip()==null?"Empty":author.getZip());
 
         out.println("</div>\n" +
                 "\n" +

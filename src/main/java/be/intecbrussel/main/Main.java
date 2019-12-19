@@ -14,11 +14,29 @@ import javax.persistence.Persistence;
 public class Main {
     public static void main(String[] args) {
 
-        Comment comment = new Comment();
-        comment.setText("testing  alteration of existing comment");
-        CommentDaoInterface commentDao = new CommentDaoDaoImpl();
+        String username = "jayjay2";
 
-        commentDao.updateComment(comment,2);
+        AuthorDaoInterface authordao = new AuthorDaoImpl();
+
+        Author author = authordao.findAuthorByUsername(username);
+       System.out.println(author.toString());
+
+        int id = author.getAuthorId();
+
+        Author updatedAuthor = authordao.findAuthorById(id);
+        updatedAuthor
+                .setUserName("jayjay4")
+                .setEmail("updated@mail.com");
+
+        System.out.println(updatedAuthor.toString());
+
+        authordao.deleteAuthorById(id);
+
+        authordao.createNewAuthor(updatedAuthor);
+
+        System.out.println("where are you " + author.toString());
+        System.out.println("updated author :" + updatedAuthor.toString());
+
 
 
     }

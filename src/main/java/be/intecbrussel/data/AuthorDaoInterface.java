@@ -9,5 +9,6 @@ public interface AuthorDaoInterface {
     public Author findAuthorById(int id);
     public Author findAuthorByUsername(String userName);
     public List<Author> findAllAuthors();
+    public void updateAuthor(Author author);
     public void deleteAuthorById(int id);
 }
