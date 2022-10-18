@@ -118,4 +118,21 @@ public class Author {
         this.telephone = telephone;
         return this;
     }
+
+    @Override
+    public String toString() {
+        return "Author{" +
+                "authorId=" + authorId +
+                ", userName='" + userName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                ", street='" + street + '\'' +
+                ", houseNr='" + houseNr + '\'' +
+                ", city='" + city + '\'' +
+                ", zip='" + zip + '\'' +
+                ", telephone='" + telephone + '\'' +
+                '}';
+    }
 }

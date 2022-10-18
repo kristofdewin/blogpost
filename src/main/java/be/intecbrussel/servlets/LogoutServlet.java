@@ -1,5 +1,6 @@
 package be.intecbrussel.servlets;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
@@ -28,6 +29,7 @@ public class LogoutServlet extends HttpServlet {
             loginCookie.setMaxAge(0);
             resp.addCookie(loginCookie);
         }
-        resp.sendRedirect("unlogedinhomepage");
+        RequestDispatcher rd = getServletContext().getRequestDispatcher("/bloghome.html");
+        rd.forward(req, resp);
     }
 }
